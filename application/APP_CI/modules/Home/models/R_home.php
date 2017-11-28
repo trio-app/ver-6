@@ -5,10 +5,10 @@ class R_home extends CI_Model {
     function menujs(){
          
                 $this->load->database();
-                $this->db->select(' cp_menu.*
+                $this->db->select(' cpmenu.*
 				',FALSE);
-                $this->db->from('cp_menu');
-                $this->db->order_by('cp_menu.menuShort','ASC');
+                $this->db->from('cpmenu');
+                $this->db->order_by('cpmenu.menuShort','ASC');
                 $query = $this->db->get();
                 $rows = $query->result_array();
                 
@@ -36,10 +36,10 @@ class R_home extends CI_Model {
     }
     function menuchild($menuparrent){
         $this->load->database();
-        $this->db->select(' cp_menudetail.*
+        $this->db->select(' cpmenudetail.*
                         ',FALSE);
-        $this->db->from('cp_menudetail');
-        $this->db->order_by('cp_menudetail.menuShort','ASC');
+        $this->db->from('cpmenudetail');
+        $this->db->order_by('cpmenudetail.menuShort','ASC');
         $this->db->where('menuParrent',$menuparrent);
         $query = $this->db->get();
         $rows = $query->result_array();

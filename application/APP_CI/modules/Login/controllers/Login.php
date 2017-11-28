@@ -24,9 +24,9 @@ class Login extends MX_Controller{
 		$acc	= $this->R_login->Signin($data);
 		if(!empty($acc)){
 			$login = array(
-				'user_login' => $acc[0]['user_login'],
-				'user_name' => $acc[0]['user_name'],
-				'user_group' => $acc[0]['user_group'],
+				'user_login' => $acc[0]['userLogin'],
+				'user_name' => $acc[0]['userName'],
+				'user_group' => $acc[0]['userGroup'],
 			);	
 		}
 

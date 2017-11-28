@@ -64,12 +64,24 @@
 									url: base_url + 'Login/signin',
 									waitMsg: 'Please Wait',
 									success: function(fp, o){
-										Ext.MessageBox.alert('Status', o.result.msg, function(){
-											window.location.assign(base_url + 'Home');
-										});
+                                                                                Ext.toast({
+                                                                                    html: o.result.msg,
+                                                                                    title: 'Notification',
+                                                                                    width: 200,
+                                                                                    align: 'tr'
+                                                                                });
+                                                                                window.location.assign(base_url + 'Home');
+//										Ext.MessageBox.alert('Status', o.result.msg, function(){
+//											window.location.assign(base_url + 'Home');
+//										});
 									},
 									failure: function(fp, o){
-										Ext.MessageBox.alert('Status', o.result.msg);	
+                                                                                Ext.toast({
+                                                                                    html: o.result.msg,
+                                                                                    title: 'Notification',
+                                                                                    width: 200,
+                                                                                    align: 'tr'
+                                                                                });
 									}
 								});
 
