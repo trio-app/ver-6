@@ -1,20 +1,20 @@
-  Ext.define('SystemAsset.Assetgroup.model.M_assetgroup', {
+  Ext.define('SystemAsset.Assetsublocation.model.M_assetsublocation', {
     extend: 'Ext.data.Model',
-    fields: ['GroupID', 'GroupName', 'GroupDescription']
+    fields: ['SublocID', 'LocName', 'SubLocname', 'SubDescription']
   });
 
-  Ext.define('SystemAsset.Assetgroup.store.ST_assetgroup', {
+  Ext.define('SystemAsset.Assetsublocation.store.ST_assetsublocation', {
     extend  : 'Ext.data.Store',
-    model   : 'SystemAsset.Assetgroup.model.M_assetgroup',
+    model   : 'SystemAsset.Assetsublocation.model.M_assetsublocation',
     autoLoad : true,
     autoSync: true,
     proxy: {
         type: 'ajax',
         actionMethods: {create: 'POST',read: 'POST',update: 'POST',destroy: 'POST'},
         api: {
-            create: base_url + 'Assetgroup/create',
-            read: base_url + 'Assetgroup/read',
-            update: base_url + 'Assetgroup/update',
+            create: base_url + 'Assetsublocation/create',
+            read: base_url + 'Assetsublocation/read',
+            update: base_url + 'Assetsublocation/update',
         },
         reader: {
             type: 'json',

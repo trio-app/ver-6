@@ -1,20 +1,20 @@
-  Ext.define('SystemAsset.Assetgroup.model.M_assetgroup', {
+  Ext.define('SystemAsset.Assetpic.model.M_assetpic', {
     extend: 'Ext.data.Model',
-    fields: ['GroupID', 'GroupName', 'GroupDescription']
+    fields: ['PicID', 'PicName', 'PicDescription']
   });
 
-  Ext.define('SystemAsset.Assetgroup.store.ST_assetgroup', {
+  Ext.define('SystemAsset.Assetpic.store.ST_assetpic', {
     extend  : 'Ext.data.Store',
-    model   : 'SystemAsset.Assetgroup.model.M_assetgroup',
+    model   : 'SystemAsset.Assetpic.model.M_assetpic',
     autoLoad : true,
     autoSync: true,
     proxy: {
         type: 'ajax',
         actionMethods: {create: 'POST',read: 'POST',update: 'POST',destroy: 'POST'},
         api: {
-            create: base_url + 'Assetgroup/create',
-            read: base_url + 'Assetgroup/read',
-            update: base_url + 'Assetgroup/update',
+            create: base_url + 'Assetpic/create',
+            read: base_url + 'Assetpic/read',
+            update: base_url + 'Assetpic/update',
         },
         reader: {
             type: 'json',
