@@ -1,9 +1,9 @@
-Ext.define('SystemAsset.Assetgroup.view.FRM_assetgroup',{
+Ext.define('SystemAsset.Assetsublocation.view.FRM_assetsublocation',{
    extend: 'Ext.form.Panel',
-   alias: 'widget.FRM_assetgroup',
+   alias: 'widget.FRM_assetsublocation',
    frame: true,
    height: 400,
-   title: 'Form Master Group',
+   title: 'Form Master Sub Location',
    border: 0,
     config: {
             recordIndex: 0,
@@ -26,10 +26,8 @@ Ext.define('SystemAsset.Assetgroup.view.FRM_assetgroup',{
           name  : 'SublocID',
           fieldLabel: 'Sublocation ID'
         },{
-            xtype: 'combo',
+            xtype: 'combobox',
             fieldLabel: 'Location Name',
-            padding: '0 0 0 0',
-            margins: '0 5 0 0',
             id: 'LocName',
             name:'LocName',
             allowBlank:false,
