@@ -10,7 +10,7 @@
     autoSync: true,
     proxy: {
         type: 'ajax',
-        actionMethods: 'POST',
+        actionMethods: {create: 'POST',read: 'POST',update: 'POST',destroy: 'POST'},
         api: {
             create: base_url + 'Assetcategory/create',
             read: base_url + 'Assetcategory/read',
