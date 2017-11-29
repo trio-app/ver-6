@@ -40,15 +40,13 @@
         Ext.Msg.confirm('Delete Data.', 'Delete <b>' + record.data.GroupName + '</b>.<br/>Are you sure?', function (button) {
             if (button == 'yes') {
                 this.doProsesCRUD('delete',record);
-                //console.log(record.data);
             }
         }, this);
     },
     doProsesCRUD : function (inAction,record){
         var grid = Ext.getCmp('GRID_assetgroup');
         var form = Ext.getCmp('FRM_assetgroup');
-        var store = grid.getStore();//Ext.getStore('SystemAsset.Assetgroup.store.STassetgroup');;//
-        console.log(record.data);
+        var store = grid.getStore();
         Ext.Ajax.request({
                     url: base_url + 'Assetgroup/' +  inAction,
                     method: 'POST',
@@ -57,7 +55,6 @@
                     success: function(response, o){
                         switch(inAction) {
                             case 'delete':
-                                console.log(o);
                                     store.load();
                                     Ext.toast({
                                         html: 'Delete Asset Group Success',
@@ -90,7 +87,9 @@
                                         timeout: 5000
                                     });
                                 break;
-                        }
+                        }    
+                    console.log(o);
+                    console.log(response);
                     form.reset();
                     form.setActions('');
 
