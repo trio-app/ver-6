@@ -41,7 +41,7 @@ Ext.define('SystemAsset.Assetsublocation.view.FRM_assetsublocation',{
                 fields: [ 'LocName' ],
                 proxy: {
                     type: 'ajax',
-                    url: baseurl + 'Assetlocation/cbolist',
+                    url: base_url + 'Assetlocation/cbolist',
                     reader: {
                         type: 'json',
                     }
