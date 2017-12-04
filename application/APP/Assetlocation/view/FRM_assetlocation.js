@@ -54,7 +54,7 @@ Ext.define('SystemAsset.Assetlocation.view.FRM_assetlocation',{
         uniquename: function (v) {
             return Ext.form.field.VTypes.uniquenameRegex.test(v);
         },
-        uniquenameRegex: /^[A-Za-z]{1}[A-Za-z._0-9]*$/,
+        uniquenameRegex: /^[A-Za-z]{1}[A-Za-z. _0-9]*$/,
         uniquenameText: 'Invalid unique name'
     });
 
