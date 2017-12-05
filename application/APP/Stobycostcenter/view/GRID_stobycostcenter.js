@@ -4,14 +4,15 @@
     title: 'Stock Opname By Cost Center',
     height: 400,
     width: 435,
-    frame:true,    
+    frame:true,
+    plugins:'gridfilters',
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
-        { header: 'Asset Cost Center',dataIndex:'AssetCostcenter'},
-        { header: 'Total Asset',dataIndex:'TotalAsset'},
-        { header: 'Scanned',dataIndex:'AssetScanned'},
-        { header: 'Not Scanned',dataIndex:'AssetNotScan'},
+        { header: 'Asset Cost Center',dataIndex:'AssetCostcenter',filter:'string'},
+        { header: 'Total Asset',dataIndex:'TotalAsset',filter:'string'},
+        { header: 'Scanned',dataIndex:'AssetScanned',filter:'string'},
+        { header: 'Not Scanned',dataIndex:'AssetNotScan',filter:'string'},
     ];
        
       this.bbar = Ext.create('Ext.PagingToolbar', {
