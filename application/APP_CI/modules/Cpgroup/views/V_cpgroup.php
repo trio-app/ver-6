@@ -2,39 +2,39 @@
 Ext.application({
     name  : 'SystemAsset',
     appFolder: 'application/APP',
-    controllers: ['SystemAsset.Rassetdata.controller.C_rassetdata'],
+    controllers: ['SystemAsset.Cpgroup.controller.C_cpgroup'],
     launch: function () {
         Ext.create('Ext.container.Container', {
            layout: 'column',
            margin: '5',
            autoScroll: true,
-           renderTo: 'ID_rassetdata',
+           renderTo: 'ID_cpgroup',
            defaultType: 'container',
            items: [{
-                columnWidth: 2/2,
+                columnWidth: 3/3,
                 padding: '0 5 5',
                 items: [{
                     xtype: 'panel',
                     frame: true,
                     html: '<h3 style="text-align:center;padding:0px 10px;margin:0px 10px;">\n\
-                                    Report Asset Data\n\
+                                    Setting Group\n\
                                 </h3>'
                 }
                 ]
-            },/*{
+            },{
                 columnWidth: 1/3,
                 padding: '0 5 5 5',
-                items:[Ext.create('SystemAsset.Rassetdata.view.FRM_rassetdata',{
-                        id: 'FRM_rassetdata'
+                items:[Ext.create('SystemAsset.Cpgroup.view.FRM_cpgroup',{
+                        id: 'FRM_cpgroup'
                     })
                 ]
-            },*/{
-                columnWidth: 1/1,
+            },{
+                columnWidth: 2/3,
                 padding: '0 5 5 5',
                 items:[
-                    Ext.create('SystemAsset.Rassetdata.view.GRID_rassetdata',{
-                        id: 'GRID_rassetdata',
-                        store: Ext.create('SystemAsset.Rassetdata.store.ST_rassetdata')
+                    Ext.create('SystemAsset.Cpgroup.view.GRID_cpgroup',{
+                        id: 'GRID_cpgroup',
+                        store: Ext.create('SystemAsset.Cpgroup.store.ST_cpgroup')
                     })
                 ]
             }]
@@ -44,4 +44,4 @@ Ext.application({
     }
   );
 </script>
-<div id="ID_rassetdata"></div>
+<div id="ID_cpgroup"></div>

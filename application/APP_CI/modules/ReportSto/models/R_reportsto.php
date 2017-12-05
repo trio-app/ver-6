@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class R_rassetdata extends CI_Model {
+class R_reportsto extends CI_Model {
 
 function load_default(){
     /*$keyfilter = array();
