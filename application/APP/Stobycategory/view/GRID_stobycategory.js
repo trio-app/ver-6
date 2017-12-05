@@ -1,14 +1,14 @@
-  Ext.define('SystemAsset.Stobygroup.view.GRID_stobygroup', {
+  Ext.define('SystemAsset.Stobycategory.view.GRID_stobycategory', {
     extend: 'Ext.grid.Panel',
-    alias: 'widget.GRID_stobygroup',
-    title: 'Stock Opname By group',
+    alias: 'widget.GRID_stobycategory',
+    title: 'Stock Opname By Category',
     height: 400,
     width: 435,
     frame:true,    
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
-        { header: 'Asset Group',dataIndex:'AssetGroup'},
+        { header: 'Asset Category',dataIndex:'AssetCategory'},
         { header: 'Total Asset',dataIndex:'TotalAsset'},
         { header: 'Scanned',dataIndex:'AssetScanned'},
         { header: 'Not Scanned',dataIndex:'AssetNotScan'},

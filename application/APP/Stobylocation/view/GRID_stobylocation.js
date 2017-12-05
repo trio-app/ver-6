@@ -8,7 +8,6 @@
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
-        { header: '',dataIndex:'',hidden:true },
         { header: 'Asset Location',dataIndex:'AssetLocation'},
         { header: 'Total Asset',dataIndex:'TotalAsset'},
         { header: 'Scanned',dataIndex:'AssetScanned'},
