@@ -1,7 +1,7 @@
-  Ext.define('SystemAsset.Stobypic.view.GRID_stobypic', {
+  Ext.define('SystemAsset.Stobygroup.view.GRID_stobygroup', {
     extend: 'Ext.grid.Panel',
-    alias: 'widget.GRID_stobypic',
-    title: 'Stock Opname By PIC',
+    alias: 'widget.GRID_stobygroup',
+    title: 'Stock Opname By group',
     height: 400,
     width: 435,
     frame:true,    
@@ -9,7 +9,7 @@
       this.columns = [
         { xtype: 'rownumberer'},
         { header: '',dataIndex:'',hidden:true },
-        { header: 'PIC',dataIndex:'AssetPic'},
+        { header: 'Asset Group',dataIndex:'AssetGroup'},
         { header: 'Total Asset',dataIndex:'TotalAsset'},
         { header: 'Scanned',dataIndex:'AssetScanned'},
         { header: 'Not Scanned',dataIndex:'AssetNotScan'},
