@@ -3,13 +3,14 @@
     alias: 'widget.GRID_assetpic',
     title: 'List Data Asset Pic',
     height: 400,
-    frame:true,    
+    frame:true,
+    plugins: 'gridfilters',
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
         { header: 'Pic ID',dataIndex:'PicID',hidden:true },
-        { header: 'Pic Name',dataIndex:'PicName'},
-        { header: 'Pic Description',dataIndex:'PicDescription'},
+        { header: 'Pic Name',dataIndex:'PicName',filter:'string'},
+        { header: 'Pic Description',dataIndex:'PicDescription',filter:'string'},
     ];
        
       this.bbar = Ext.create('Ext.PagingToolbar', {

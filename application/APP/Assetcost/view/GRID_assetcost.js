@@ -3,13 +3,14 @@
     alias: 'widget.GRID_assetcost',
     title: 'List Data Asset CostCenter',
     height: 400,
-    frame:true,    
+    frame:true,
+    plugins: 'gridfilters',
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
         { header: 'CostCenter ID',dataIndex:'CostID',hidden:true },
-        { header: 'CostCenter Name',dataIndex:'CostName'},
-        { header: 'CostCenter Description',dataIndex:'CostDescription'},
+        { header: 'CostCenter Name',dataIndex:'CostName',filter:'string'},
+        { header: 'CostCenter Description',dataIndex:'CostDescription',filter:'string'},
     ];
        
       this.bbar = Ext.create('Ext.PagingToolbar', {
