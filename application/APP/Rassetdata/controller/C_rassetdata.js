@@ -9,7 +9,7 @@
       });
     },
     exportData: function(){
-        var link = baseurl + 'Reportasset/exportAsset';
+        var link = baseurl + 'Rassetdata/exportAsset';
         Ext.Ajax.request({
             url: link,
             success: function(transport){ 
