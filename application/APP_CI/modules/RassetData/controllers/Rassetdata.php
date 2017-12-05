@@ -20,8 +20,8 @@ class Rassetdata extends MX_Controller {
         
     }
     public function exportAsset(){
-        $this->load->model('Rreportasset');
-        $data['query'] = $this->Rreportasset->load_default();
+        $this->load->model('R_rassetdata');
+        $data['query'] = $this->R_rassetdata->load_default();
         $this->load->view('vexcel', $data);
     }
 

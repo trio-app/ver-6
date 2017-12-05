@@ -9,7 +9,7 @@
       });
     },
     exportData: function(){
-        var link = baseurl + 'Reportasset/exportAsset';
+        var link = baseurl + 'Reportsto/exportAsset';
         Ext.Ajax.request({
             url: link,
             success: function(transport){ 
@@ -17,12 +17,6 @@
             },
             async: false
         });
-    },
-    onRowdblclick: function(me, record, item, index){
-        var form = Ext.getCmp('FRM_reportsto').down('form');
-        form.up().setActions('edit');
-        form.getForm().setValues(record.getData());
-    },
-    
+    }
     
   });

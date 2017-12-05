@@ -15,7 +15,7 @@
         type: 'ajax',
         actionMethods: {create: 'POST',read: 'POST',update: 'POST',destroy: 'POST'},
         api: {
-            read: base_url + 'Tassetdata/read',
+            read: base_url + 'Rassetdata/read',
         },
         reader: {
             type: 'json',

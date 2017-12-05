@@ -2,8 +2,9 @@
     extend: 'Ext.grid.Panel',
     alias: 'widget.GRID_rassetdata',
     title: 'Report Asset Data',
-    height: '400',
+    height: 500,
     frame:true,    
+    plugins: 'gridfilters',
     initComponent: function () {
         this.tbar = [
         '->',

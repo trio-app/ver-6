@@ -23,7 +23,15 @@ class R_rassetdata extends CI_Model {
     $query = $this->db->get();
                     //return $this->db->last_query();
     $rows = $query->result_array();
-    return $rows;   
+    
+    $query2 = $this->db->query('SELECT FOUND_ROWS() AS hasil');
+    $count = $query2->row('hasil');
+
+    $data = array(
+                'TotalRows' => $count,
+                    'Rows' => $rows
+                 );
+    return json_encode($data);   
 
     }
 
