@@ -7,6 +7,10 @@
     frame:true,
     plugins:'gridfilters',
     initComponent: function () {
+      this.tbar = [
+          '->',
+          {text: 'Export Excel', action: 'export'}
+      ];
       this.columns = [
         { xtype: 'rownumberer'},
         { header: 'Asset Cost Center',dataIndex:'AssetCostcenter',filter:'string'},

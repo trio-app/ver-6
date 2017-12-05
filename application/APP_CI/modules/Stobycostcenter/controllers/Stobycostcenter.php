@@ -22,7 +22,7 @@ class Stobycostcenter extends MX_Controller {
     public function exportExcel(){
         $this->load->model('R_stobycostcenter');
         $data['query'] = $this->R_stobycostcenter->exportData();
-        $this->load->view('vexcel', $data);
+        $this->load->view('V_excel', $data);
     }
             
 }

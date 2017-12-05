@@ -22,7 +22,7 @@ class Stobycategory extends MX_Controller {
     public function exportExcel(){
         $this->load->model('R_stobycategory');
         $data['query'] = $this->R_stobycategory->exportData();
-        $this->load->view('vexcel', $data);
+        $this->load->view('V_excel', $data);
     }
             
 }
