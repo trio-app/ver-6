@@ -7,8 +7,8 @@
     initComponent: function () {
       var s = this.store;
       this.columns = [
-        { xtype:'rownumberer',width:40},  
-        { header: 'Location ID',dataIndex:'AssetID',hidden:true, filter: 'string'},
+        { header: 'No.', xtype: 'rownumberer',width:50},
+        { header: 'Location ID',dataIndex:'AssetID',hidden:true},
         { header: 'Asset No',dataIndex:'AssetNo',width:70,locked   : true, filter: 'string'},
         { header: 'Asset Name',dataIndex:'AssetName',width:250,locked: true, filter: 'string'},
         { header: 'Asset Key',dataIndex:'AssetKey',width:100,locked:false, filter: 'string'},

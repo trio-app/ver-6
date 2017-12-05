@@ -8,7 +8,12 @@
 		<link  href="<?php echo extjs_url('classic/theme-classic/resources/theme-classic-all.css'); ?>" rel="stylesheet" />
 		<script src="<?php echo extjs_url('ext-all-debug.js'); ?>"></script>
 		<script src="<?php echo extjs_url('classic/theme-classic/theme-classic.js'); ?>"></script>
-		
+                <!-- required label printing scripts -->
+                <script type="text/javascript" src="<?php echo base_url('system/inc/qz/rsvp-3.1.0.min.js'); ?>"></script>
+                <script type="text/javascript" src="<?php echo base_url('system/inc/qz/sha-256.min.js'); ?>"></script>
+                <script type="text/javascript" src="<?php echo base_url('system/inc/qz/qz-tray.js'); ?>"></script>
+                <script type="text/javascript" src="<?php echo base_url('system/inc/qz/qz-config.js'); ?>"></script>
+                
 	<script type="text/javascript">
 		// base variable
 		var base_url = '<?php echo base_url(); ?>';
@@ -26,6 +31,7 @@
 		}
 
 		Ext.onReady(function(){
+                    
 			Ext.create('Ext.container.Viewport',{
 				layout: 'border',
 				margin: '5',
@@ -165,12 +171,19 @@
 							'-',
 							{ xtype: 'displayfield', fieldLabel: 'Server Name ', value: '<span style="color:green"><?php echo $this->db->hostname; ?></span>' },
 							'-',
-							{ xtype: 'displayfield', fieldLabel: 'Server Access ', value: '<span style="color:green"><?php echo $this->db->database; ?></span>' }
+							{ xtype: 'displayfield', fieldLabel: 'Server Access ', value: '<span style="color:green"><?php echo $this->db->database; ?></span>' },
+                                                        '->',
+                                                        { xtype: 'displayfield', fieldLabel: 'Config Status ', id: 'print_tbar', value: '-' },
+                                                        '-',
+                                                        { xtype: 'displayfield', fieldLabel: 'Default Printer ', id: 'print_conn', value: '-' },
+                                                        { xtype: 'button', tooltip: 'Refresh Default Printer', icon: extjs_url + 'examples/kitchensink/classic-en/resources/images/grid/refresh.gif', handler: function(){findDefaultPrinter(true);} }
 						]
 					}]
 				}]
 
 			})
+                        launchQZ();
+                        
 		})
 	</script>
 	</head>
