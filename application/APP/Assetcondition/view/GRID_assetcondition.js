@@ -3,13 +3,14 @@
     alias: 'widget.GRID_assetcondition',
     title: 'List Data Asset Condition',
     height: 400,
-    frame:true,    
+    frame:true,
+    plugins: 'gridfilters',
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
         { header: 'Condition ID',dataIndex:'conID',hidden:true },
-        { header: 'Condition Name',dataIndex:'conName'},
-        { header: 'Description',dataIndex:'conDescription'},
+        { header: 'Condition Name',dataIndex:'conName',filter:'string'},
+        { header: 'Description',dataIndex:'conDescription',filter:'string'},
     ];
        
       this.bbar = Ext.create('Ext.PagingToolbar', {

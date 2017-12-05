@@ -3,13 +3,14 @@
     alias: 'widget.GRID_assetcategory',
     title: 'List Data Asset Category',
     height: 400,
-    frame:true,    
+    frame:true,
+    plugins: 'gridfilters',
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
         { header: 'Category ID',dataIndex:'CategoryID',hidden:true },
-        { header: 'Category Name',dataIndex:'CategoryName'},
-        { header: 'Category Description',dataIndex:'CategoryDescription'},
+        { header: 'Category Name',dataIndex:'CategoryName', filter: 'string'},
+        { header: 'Category Description',dataIndex:'CategoryDescription', filter: 'string'},
     ];
        
       this.bbar = Ext.create('Ext.PagingToolbar', {

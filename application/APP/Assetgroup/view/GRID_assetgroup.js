@@ -3,13 +3,14 @@
     alias: 'widget.GRID_assetgroup',
     title: 'List Data Asset Group',
     height: 400,
-    frame:true,    
+    frame:true,
+    plugins: 'gridfilters',
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
         { header: 'Group ID',dataIndex:'GroupID',hidden:true },
-        { header: 'Group Name',dataIndex:'GroupName'},
-        { header: 'Group Description',dataIndex:'GroupDescription'},
+        { header: 'Group Name',dataIndex:'GroupName', filter:'string'},
+        { header: 'Group Description',dataIndex:'GroupDescription', filter:'string'},
     ];
        
       this.bbar = Ext.create('Ext.PagingToolbar', {

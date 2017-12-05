@@ -3,13 +3,14 @@
     alias: 'widget.GRID_assetlocation',
     title: 'List Data Asset Location',
     height: 400,
-    frame:true,    
+    frame:true,
+    plugins: 'gridfilters',
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
         { header: 'Location ID',dataIndex:'LocID',hidden:true },
-        { header: 'Location Name',dataIndex:'LocName'},
-        { header: 'Location Description',dataIndex:'LocDescription'},
+        { header: 'Location Name',dataIndex:'LocName',filter:'string'},
+        { header: 'Location Description',dataIndex:'LocDescription',filter:'string'},
     ];
        
       this.bbar = Ext.create('Ext.PagingToolbar', {

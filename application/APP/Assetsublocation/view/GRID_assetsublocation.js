@@ -3,14 +3,15 @@
     alias: 'widget.GRID_assetsublocation',
     title: 'List Data Asset Sub Location',
     height: 400,
-    frame:true,    
+    frame:true,
+    plugins: 'gridfilters',
     initComponent: function () {
       this.columns = [
         { xtype: 'rownumberer'},
         { header: 'Sublocation ID',dataIndex:'SublocID',hidden:true },
-        { header: 'Location Name',dataIndex:'LocName'},
-        { header: 'Sub Location',dataIndex:'SubLocname'},
-        { header: 'Description',dataIndex:'SubDescription'},
+        { header: 'Location Name',dataIndex:'LocName',filter:'string'},
+        { header: 'Sub Location',dataIndex:'SubLocname',filter:'string'},
+        { header: 'Description',dataIndex:'SubDescription',filter:'string'},
     ];
        
       this.bbar = Ext.create('Ext.PagingToolbar', {
