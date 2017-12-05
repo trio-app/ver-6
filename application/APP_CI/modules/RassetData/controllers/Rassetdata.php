@@ -12,8 +12,7 @@ class Rassetdata extends MX_Controller {
         public function read(){
         $this->load->model('R_rassetdata');
         $start = $this->input->post('start');
-        $limit = $this->input->post('limit');
-        $filter = array();
+        $limit = $this->input->post('limit');   
         $filter = $this->input->post('filter');
         header('Content-type: application/json');
         print_r( $this->R_rassetdata->load_default($start,$limit,$filter));

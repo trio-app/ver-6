@@ -1,8 +1,9 @@
   Ext.define('SystemAsset.Rassetdata.model.M_rassetdata', {
     extend: 'Ext.data.Model',
     fields: ['AssetID','AssetNo','AssetNoRegDept','AssetKey','AssetSAPNo','AssetName','AssetGroup',
-'AssetCategory','AssetLocation','AssetSublocation','AssetCostcenter','AssetPic','AssetCondition',
-'AssetRemark','AssetInfo','AssetAquisitiondate','AssetLabel','AssetCost']
+            'AssetCategory','AssetLocation','AssetSublocation','AssetCostcenter','AssetPic','AssetCondition',
+            'AssetRemark','AssetInfo','AssetAquisitiondate','AssetLabel','AssetCost'
+]
   });
 
   Ext.define('SystemAsset.Rassetdata.store.ST_rassetdata', {

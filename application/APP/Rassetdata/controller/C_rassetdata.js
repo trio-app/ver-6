@@ -17,12 +17,6 @@
             },
             async: false
         });
-    },
-    onRowdblclick: function(me, record, item, index){
-        var form = Ext.getCmp('FRM_rassetdata').down('form');
-        form.up().setActions('edit');
-        form.getForm().setValues(record.getData());
-    },
-    
-    
+    }
+
   });
