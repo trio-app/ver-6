@@ -1,4 +1,4 @@
-  Ext.define('SystemAsset.Rassetdata.controller.C_rassetdata', {
+  Ext.define('SystemAsset.Reportsto.controller.C_reportsto', {
     extend  : 'Ext.app.Controller',
     init: function () {
         this.control({
@@ -19,7 +19,7 @@
         });
     },
     onRowdblclick: function(me, record, item, index){
-        var form = Ext.getCmp('FRM_rassetdata').down('form');
+        var form = Ext.getCmp('FRM_reportsto').down('form');
         form.up().setActions('edit');
         form.getForm().setValues(record.getData());
     },

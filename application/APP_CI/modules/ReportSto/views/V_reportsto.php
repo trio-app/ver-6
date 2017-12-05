@@ -2,13 +2,13 @@
 Ext.application({
     name  : 'SystemAsset',
     appFolder: 'application/APP',
-    controllers: ['SystemAsset.Rassetdata.controller.C_rassetdata'],
+    controllers: ['SystemAsset.Reportsto.controller.C_reportsto'],
     launch: function () {
         Ext.create('Ext.container.Container', {
            layout: 'column',
            margin: '5',
            autoScroll: true,
-           renderTo: 'ID_rassetdata',
+           renderTo: 'ID_reportsto',
            defaultType: 'container',
            items: [{
                 columnWidth: 2/2,
@@ -24,17 +24,17 @@ Ext.application({
             },/*{
                 columnWidth: 1/3,
                 padding: '0 5 5 5',
-                items:[Ext.create('SystemAsset.Rassetdata.view.FRM_rassetdata',{
-                        id: 'FRM_rassetdata'
+                items:[Ext.create('SystemAsset.Reportsto.view.FRM_reportsto',{
+                        id: 'FRM_reportsto'
                     })
                 ]
             },*/{
                 columnWidth: 1/1,
                 padding: '0 5 5 5',
                 items:[
-                    Ext.create('SystemAsset.Rassetdata.view.GRID_rassetdata',{
-                        id: 'GRID_rassetdata',
-                        store: Ext.create('SystemAsset.Rassetdata.store.ST_rassetdata')
+                    Ext.create('SystemAsset.Reportsto.view.GRID_reportsto',{
+                        id: 'GRID_reportsto',
+                        store: Ext.create('SystemAsset.Reportsto.store.ST_reportsto')
                     })
                 ]
             }]
@@ -44,4 +44,4 @@ Ext.application({
     }
   );
 </script>
-<div id="ID_rassetdata"></div>
+<div id="ID_reportsto"></div>
